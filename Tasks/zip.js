@@ -1,18 +1,18 @@
 // Zip two arrays, [1, 2] and [3, 4] -> [[1, 3], [2, 4]]
 
-const zipTwoArr = function (arr1 = [], arr2 = []) {
-
-  for(let i = 0; i < arr2.length; i++){
-    let arrCell = [arr1[i], arr2[i]];
-    if(i < 0){
-      delete arr1[i];
+const zip = function (a = [], b = []) {
+  let i = 0;
+  j = 0;
+  for (x of b) {
+    CELL = [a[i++], x];
+    if (i < j) {
+      delete a[i++];
     } else {
-      arr2[i] = arrCell;
+      (() => (b[j++] = CELL))();
     }
-
-    if(arrCell[0] === undefined){arr2.length -= 1}
+    if (CELL[0] == undefined) b.length -= 1
   }
-  return arr2;
+  return b;
 };
 
-module.exports = zipTwoArr;
+module.exports = zip;
