@@ -3,7 +3,7 @@
 const zipTwoArr = function (arr1 = [], arr2 = []) {
 
   for(let i = 0; i < arr2.length; i++){
-    let arrCell = [arr1[i], arr2[j]];
+    let arrCell = [arr1[i], arr2[i]];
     if(i < 0){
       delete arr1[i];
     } else {
