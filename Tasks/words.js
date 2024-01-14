@@ -2,34 +2,27 @@
 //1.rename function and variables
 //2.delete checking if flag true in (if) condition 
 //3.delete useless (else) in construction (if(){}ele{})
+//4.delete useless (if) in construction (if(){}ele{})
 const wordsCounter = function (enterStr) {
   let numberOfWords = 0;
   let flag = false;
   for (const elem of enterStr) {
     if (!flag) {
       if (elem === ' ') {
-        if (flag) {
-          flag = false;
-        } 
+        flag = false;
       } else {
-        if (!flag) {
-          flag = true;
-        } 
-        number_of_words_in_s++;
+        flag = true;
+         numberOfWords++;
       }
     } else {
       if (elem === ' ') {
-        if (flag) {
-          flag = false;
-        } 
+        flag = false;
       } else {
-        if (!flag) {
-          flag = true;
-        } 
+        flag = true;
       }
     }
   }
-  return wordsCounter;
+  return  numberOfWords;
 };
 
-module.exports = Words;
+module.exports = wordsCounter;
