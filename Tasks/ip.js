@@ -1,16 +1,17 @@
 // Split string by the first occurrence of separator
 //1.change name of function and variables
+//2.change type of loop from for..of to for . So (let j) we don`t need animore
 const parseip = (str) => {
   let arr = [];
-  if (str === '') return;
-  else {
+  if (str === ''){
+    return;
+  } else {
     const arrOfIpElements = str.split('.');
     if (arrOfIpElements.length != 4) return;
-    let j = 0;
-    for (const elem of arrOfIpElements) {
-      arr[j] = parseInt(elem);
-      if (isNaN(arr[j])) return;
-      j++;
+    
+     for (let i = 0; i < arrOfIpElements.length;i++) {
+      arr[i] = parseInt(arrOfIpElements[i]);
+      if (isNaN(arr[i])) return;
     }
   }
   return arr;
