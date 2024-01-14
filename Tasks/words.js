@@ -4,8 +4,12 @@
 //3.delete useless (else) in construction (if(){}ele{})
 //4.delete useless (if) in construction (if(){}ele{})
 //5.to improve function we will use methods .delete (let flag) and all loop
+//6. check if string empty
 const wordsCounter = function (enterStr) {
-  let numberOfWords = 0;
+  let numberOfWords;
+  if(enterStr === ''){
+    numberOfWords = 0;
+  }
   
   return  numberOfWords;
 };
