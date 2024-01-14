@@ -1,11 +1,11 @@
 // Count words in a string
-
-Words = function (s) {
-  number_of_words_in_s = 0;
-  flag = false;
-  for (c of s) {
+//1.rename function and variables
+const wordsCounter = function (enterStr) {
+  let numberOfWords = 0;
+  let flag = false;
+  for (const elem of enterStr) {
     if (!flag) {
-      if (c === ' ') {
+      if (elem === ' ') {
         if (flag === true) {
           flag = false;
         } else {
@@ -20,7 +20,7 @@ Words = function (s) {
         number_of_words_in_s++;
       }
     } else {
-      if (c === ' ') {
+      if (elem === ' ') {
         if (flag === true) {
           flag = false;
         } else {
@@ -35,7 +35,7 @@ Words = function (s) {
       }
     }
   }
-  return number_of_words_in_s;
+  return wordsCounter;
 };
 
 module.exports = Words;
