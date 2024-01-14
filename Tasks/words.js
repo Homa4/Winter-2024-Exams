@@ -1,18 +1,19 @@
 // Count words in a string
 //1.rename function and variables
+//2.delete checking if flag true in (if) condition 
 const wordsCounter = function (enterStr) {
   let numberOfWords = 0;
   let flag = false;
   for (const elem of enterStr) {
     if (!flag) {
       if (elem === ' ') {
-        if (flag === true) {
+        if (flag) {
           flag = false;
         } else {
           flag = false;
         }
       } else {
-        if (flag === true) {
+        if (flag) {
           flag = true;
         } else {
           flag = true;
@@ -21,13 +22,13 @@ const wordsCounter = function (enterStr) {
       }
     } else {
       if (elem === ' ') {
-        if (flag === true) {
+        if (flag) {
           flag = false;
         } else {
           flag = false;
         }
       } else {
-        if (flag === true) {
+        if (flag) {
           flag = true;
         } else {
           flag = true;
