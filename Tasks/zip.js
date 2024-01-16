@@ -2,6 +2,7 @@
 //1. change function name and variables name
 //2.change loop (for..of) on loop (for)
 //3.using (for) we can delete (let j) using variable (i) instead
+//4.add empty array and clone of first array
 const zipTwoArr= function (arr1 = [], arr2 = []) {
   const resArr =[];
   const tempArr = [...arr1];
