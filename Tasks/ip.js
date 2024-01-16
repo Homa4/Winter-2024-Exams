@@ -1,7 +1,7 @@
 // Split string by the first occurrence of separator
 //1.change name of function and variables
 //2.change type of loop from for..of to for . So (let j) we don`t need animore
-//3. delete else because it useless
+//3. delete else it useless , because after (return) no sence write (else) it will not executed
 const parseip = (str) => {
   let arr = [];
   if (str === '') return; 
