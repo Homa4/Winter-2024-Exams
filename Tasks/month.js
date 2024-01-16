@@ -6,8 +6,9 @@
 const arrMonths = ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'];
 
 const getMonthNumber = (monthNameStr) => {
+  const littleArr = monthNameStr.toLowerCase()
   for (let i = 0; i < arrMonths.length; i++) {
-    if (monthNameStr.toLowerCase().startsWith(arrMonths[i])) return i + 1;
+    if (littleArr.startsWith(arrMonths[i])) return i + 1;
   }
   return -1;
 };
