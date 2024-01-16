@@ -5,7 +5,7 @@
 //4.add empty array and clone of first array
 //5. to avoid using delete we will delete if(){}else{} in loop 
 //6.instead mutating array , create new one 
-const zipTwoArr= function (arr1 = [], arr2 = []) {
+const zipTwoArr= function (arr1, arr2) {
   const resArr =[];
   const minLength = Math.min(arr1.length, arr2.length);
   for(let i = 0; i<minLength; i++){
