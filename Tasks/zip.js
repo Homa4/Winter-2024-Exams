@@ -7,8 +7,8 @@
 //6.instead mutating array , create new one 
 const zipTwoArr= function (arr1 = [], arr2 = []) {
   const resArr =[];
-  const tempArr = [...arr1];
-  for(let i = 0; i<arr2.length; i++){
+  const minLength = Math.min(arr1.length, arr2.length);
+  for(let i = 0; i<minLength; i++){
     let arrCell = [arr1[i], arr2[i]];
     resArr.push(arrCell);
   }
