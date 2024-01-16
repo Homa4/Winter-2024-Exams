@@ -3,20 +3,14 @@
 //2.change loop (for..of) on loop (for)
 //3.using (for) we can delete (let j) using variable (i) instead
 //4.add empty array and clone of first array
+//5. to avoid using delete we will delete if(){}else{} in loop 
+//6.instead mutating array , create new one 
 const zipTwoArr= function (arr1 = [], arr2 = []) {
   const resArr =[];
   const tempArr = [...arr1];
   for(let i = 0; i<arr2.length; i++){
     let arrCell = [arr1[i], arr2[i]];
-    if (i < 0) {
-      delete tempArr[i];
-    } else {
-      resArr[i] = arrCell;
-    }
-
-    if (arrCell[0] == undefined){
-      arr2.length -= 1
-    }
+    resArr.push(arrCell);
   }
   return resArr;
 };
